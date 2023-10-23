@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="dashboard.png"  alt="three lines stacked icon" />
+        <span id="dash_icon">Dashboard</span>
+        <img src="home.png" alt="icon of a home">
+        <span>Home</span>
+        <img src="profile.png" alt="icon of a profile card">
+        <span>Profile</span>
+        <img src="messages.png" alt="icon of chat bubble">
+        <span>Messages</span>
+        <img src="history.png" alt="icon of clock pointing counter clockwise">
+        <span>History</span>
+        <img src="tasks.png" alt="icon of bulleted list">
+        <span>Tasks</span>
+        <img src="communities.png" alt="icon of three people close together">
+        <span>Communities</span>
+        <img src="settings.png" alt="icon of cog" class="sidebar_bottom">
+        <span class="sidebar_bottom">Settings</span>
+        <img src="support.png" alt="icon of a handshake" class="sidebar_bottom">
+        <span class="sidebar_bottom">Support</span>
+        <img src="privacy.png" alt="icon of a house with a padlock" class="sidebar_bottom">
+        <span class="sidebar_bottom">Privacy</span>
+    </div>
+    <div class="header">
+        <div class="search_area">
+            <img src="search.png" alt="icon for magnifying glass" id="glass">
+            <input type="text" id="searchbar">
+            </div>
+          <div class="user_area">
+            <img src="notification.png" alt="icon for a bell" id="bell">
+            <img src="kid buu.png" alt="portrait of kid buu from dragon ball z" class="profile_pics" id="kidbuu">
+            <p>Kid Buu</p>
+          </div>
+          <div class="welcome_area">
+            <img src="kid buu.png" alt="portrait of kid buu from dragon ball z" id="kidbuu2">
+            <span id="username">Hello, Kid Buu (@majinbuu) </span>
+            <div class="header_buttons">
+                <button>new</button>
+                <button>upload</button>
+                <button>share</button>
+            </div>
+          </div>
+        
+    </div>
+    <div class="main_content">
+      <button id="newButton">New Manga</button>
+      <form id='form' style="display: none;">
+        <label for="title">Title:</label>
+        <input type="text" id="title">
+        <label for="author">Author:</label>
+        <input type="text" id="author">
+        <label for="chapters">Chapters:</label>
+        <input type="text" id="chapters">
+        <label for="read">Read:</label>
+        <input type="checkbox" id="read">
+        <input type="submit" id="Add manga">
+       </form> 
+        <div class="feed"></div>
+            <div class="headings">Your feed</div>
+            <div class="cards">
+                <div class="card">
+                  <p class="card_text">Why is it so hard to explore the ocean I think we should just go 
+                    to bermuda and snoop around u know?
+                  </p>
+                    <div class="card_icons">
+                      <span>@theThinker</span>
+                        <img src="heart.png" alt="icon of heart">
+                        <img src="eye-outline.png" alt="icon of an eyeball">
+                        <img src="share.png" alt="icon of a network">
+                   </div>
+                </div>     
+              </div>
+            </div>
+      
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
