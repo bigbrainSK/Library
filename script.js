@@ -12,9 +12,9 @@ function display() {
     libraryManga.innerHTML = "";
     for(let i =0; i<library.length; i++) {
         let manga = library[i];
-        let mangaElement = document.createElement("div");
-        mangaElement.innerHTML = `
-          <div class = card>
+        let mangaElement = document.createElement("div");       //using backticks so we can write html here
+        mangaElement.innerHTML = `                              
+          <div class = "card">
             <div class="header">
                 <h1>${manga.title}</h1>
                 <h2>${manga.author}</h2>
@@ -22,8 +22,8 @@ function display() {
              <div class="body">
                 <p>${manga.chapters}</p>
                 <p>${manga.read ? "read" : "not read" }</p>
-                <button id = "delete" onclick = "deleteManga(${i})"> X </button>
-                <button id = "read" onclick = "toggleRead(${i})>read</button>
+                <button id = "delete" onclick = "deleteManga(${i})"> x </button>
+                <button id = "read" onclick = "toggleRead(${i})">read?</button>
              </div> 
          </div>  
             `;
@@ -43,13 +43,18 @@ function addToLibrary() {
 }
 
 function deleteManga(index) {
-    library.splice(index, 1);
-    display();
+    library.splice(index, 1);           //will only remove the one object, at the index
+    display();                          //need to display again
 }
 
 
-Manga.prototype.toggleRead = function () {
+Manga.prototype.toggleRead = function () {          //using prototype so it works with every manga iteration
     this.read = !this.read;
+}
+
+function toggleRead(index) {                    //this function calls the prototype
+    library[index].toggleRead();
+    display()
 }
 
 let newMangaButton = document.querySelector("#newButton");
