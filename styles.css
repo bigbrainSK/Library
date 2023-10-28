@@ -82,8 +82,13 @@ input {
 }
 
 .card {
+    display:inline-block;
     border:3px solid black;
     text-align: center;
     margin:50px;
     width:300px;
+}
+
+.readStatus {
+    background-color:turquoise;
 }

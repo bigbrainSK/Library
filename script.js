@@ -21,7 +21,7 @@ function display() {
             </div>
              <div class="body">
                 <p>${manga.chapters}</p>
-                <p>${manga.read ? "read" : "not read" }</p>
+                <p class ="readStatus">${manga.read ? "READ" : "NOT READ" }</p>
                 <button id = "delete" onclick = "deleteManga(${i})"> x </button>
                 <button id = "read" onclick = "toggleRead(${i})">read?</button>
              </div> 
